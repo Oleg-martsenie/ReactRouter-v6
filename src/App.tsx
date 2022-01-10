@@ -1,4 +1,5 @@
 import {  Routes, Route  } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Home } from './pages/home'
 import { About } from './pages/about'
 import { AboutGabriel } from './pages/about-gabriel'
@@ -12,7 +13,7 @@ const App = () => {
     <div className="p-8">
       <header className='flex justify-between uppercase align-center p-2'>
         <div className="logo">
-          <h1><a href="/">⚠️⚠️⚠️</a></h1>
+          <h1><Link to="/">⚠️⚠️⚠️</Link></h1>
         </div>
         <div className="menu">
           <nav>
@@ -32,9 +33,6 @@ const App = () => {
         <Route path="/sobre/gabriel" element={<AboutGabriel />}/>
         <Route path='*' element={<NotFound/>}/>
 
-        {/* /sobre
-        /sobre/gabriel
-        /sobre/pedro */}
       </Routes>
 
       </div>
