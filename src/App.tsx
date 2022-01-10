@@ -2,8 +2,7 @@ import {  Routes, Route  } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { Home } from './pages/home'
 import { About } from './pages/about'
-import { AboutGabriel } from './pages/about-gabriel'
-import { AboutPedro } from './pages/about-predro'
+import { AboutItem } from './pages/about-item'
 import { NotFound } from './pages/notFound';
 
 
@@ -29,8 +28,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/sobre" element={<About />}/>
-        <Route path="/sobre/pedro" element={<AboutPedro />}/>
-        <Route path="/sobre/gabriel" element={<AboutGabriel />}/>
+        <Route path="/sobre/:slug" element={<AboutItem />} />
         <Route path='*' element={<NotFound/>}/>
 
       </Routes>
